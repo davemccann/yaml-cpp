@@ -5,3 +5,4 @@ bin
 bin-obj
 *.vcxproj
 *.vcxproj.filters
+*.vcxproj.user

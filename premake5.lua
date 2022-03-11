@@ -9,7 +9,8 @@ project "yamlcpp"
     objdir ("bin-obj")
 
     configmap {
-      ["Release"] = "ReleaseStatic"
+      ["Release"] = "ReleaseStatic",
+      ["Debug"] = "DebugStatic"
     }
 
     includedirs {
@@ -25,6 +26,10 @@ project "yamlcpp"
       system "Windows"
       staticruntime "On"
 
-    filter "configurations:Release"
+    filter "configurations:Debug*"
+      runtime "Debug"
+      symbols "On"
+
+    filter "configurations:Release*"
       optimize "Speed"
-      buildoptions "/MD"
+      runtime "Release"
