@@ -5,12 +5,12 @@ project "yamlcpp"
     language "C++"
     cppdialect "C++17"
 
-    targetdir ("bin")
-    objdir ("bin-obj")
+    targetdir ("bin/" .. ConfigOutputPath)
+    objdir ("bin-obj/" .. ConfigOutputPath)
 
     configmap {
-      ["Release"] = "ReleaseStatic",
-      ["Debug"] = "DebugStatic"
+      ["Debug"] = "DebugStatic",
+      ["Release"] = "ReleaseStatic"
     }
 
     includedirs {
