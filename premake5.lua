@@ -23,6 +23,10 @@ project "yamlcpp"
       "src/**.cpp",
     }
 
+    defines {
+        "YAML_CPP_STATIC_DEFINE"
+    }
+
     filter "platforms:x64"
       system "Windows"
 
