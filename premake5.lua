@@ -1,4 +1,3 @@
-include "PremakeDependencies.lua"
 
 project "yamlcpp"
     kind "StaticLib"
